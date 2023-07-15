@@ -1,0 +1,254 @@
+{
+	"info": {
+		"_postman_id": "2a5d0d88-932d-488f-a698-f3a104c70e3b",
+		"name": "JerseyWebServices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "adpEmployee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/JerseyWebService/myApi/adpEmployee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"JerseyWebService",
+						"myApi",
+						"adpEmployee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adpEmployee getByEid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/JerseyWebService/myApi/adpEmployee/56",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"JerseyWebService",
+						"myApi",
+						"adpEmployee",
+						"56"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adpEmployee get by  page number and pagesize",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/JerseyWebService/myApi/adpEmployee?pageNumber=2&sortBy=desc&pageSize=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"JerseyWebService",
+						"myApi",
+						"adpEmployee"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "2"
+						},
+						{
+							"key": "sortBy",
+							"value": "desc"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employee getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/JerseyWebService/myApi/employee/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"JerseyWebService",
+						"myApi",
+						"employee",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employee getByEid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/JerseyWebService/myApi/employee/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"JerseyWebService",
+						"myApi",
+						"employee",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employee save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"birthDate\": \"1969-05-08T00:00:00\",\r\n    \"firstName\": \"postman\",\r\n    \"gender\": \"M\",\r\n    \"lastName\": \"dakkiya\",\r\n    \"salary\": 50000.0,\r\n    \"status\": \"A\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/JerseyWebService/myApi/employee/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"JerseyWebService",
+						"myApi",
+						"employee",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employeee update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"birthDate\": \"1969-05-08T00:00:00\",\r\n    \"eid\": 100,\r\n    \"firstName\": \"postman\",\r\n    \"gender\": \"M\",\r\n    \"lastName\": \"dakiya\",\r\n    \"salary\": 60000,\r\n    \"status\": \"A\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/JerseyWebService/myApi/employee/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"JerseyWebService",
+						"myApi",
+						"employee",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employee delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"birthDate\": \"1969-05-08T00:00:00\",\r\n    \"eid\": 99,\r\n    \"firstName\": \"postman\",\r\n    \"gender\": \"M\",\r\n    \"lastName\": \"dakiya\",\r\n    \"salary\": 60000,\r\n    \"status\": \"A\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/JerseyWebService/myApi/employee/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"JerseyWebService",
+						"myApi",
+						"employee",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employee delete by eid",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "employee delete by eid",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/JerseyWebService/myApi/employee/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"JerseyWebService",
+						"myApi",
+						"employee",
+						"100"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

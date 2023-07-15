@@ -86,7 +86,7 @@ public class EmployeeMatserController {
 			eservice = new EmployeeServiceImpl();
 			Employee sqlEmp = eservice.findById(dto.getEid());
 			if (sqlEmp != null) {
-				sqlEmp.getBaseProperties().setUpdatedBy("postman");
+				sqlEmp.getBaseProperties().setUpdatedBy("JerseyWebService-app");
 				sqlEmp.getBaseProperties().setUpdatedOn(new Date());
 
 				sqlEmp.setFirstName(dto.getFirstName());
@@ -117,7 +117,7 @@ public class EmployeeMatserController {
 			Employee sqlEmp = eservice.findById(dto.getEid());
 			if (sqlEmp != null) {
 
-				sqlEmp.getBaseProperties().setUpdatedBy("postman");
+				sqlEmp.getBaseProperties().setUpdatedBy("jerseywebservice-app");
 				sqlEmp.getBaseProperties().setUpdatedOn(new Date());
 
 				sqlEmp.setFirstName(dto.getFirstName());
@@ -138,7 +138,8 @@ public class EmployeeMatserController {
 
 		return dto;
 	}
-
+	
+	//wrong
 	@DELETE
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Boolean deleteEmployee(EmployeeDto dto) {
@@ -161,6 +162,7 @@ public class EmployeeMatserController {
 	}
 
 	@DELETE
+	@Path("/{eid}")
 	public Boolean deleteByEid(@PathParam("eid") Long eid) {
 		Boolean opFlag=false;
 		if (eid != null) {
